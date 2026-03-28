@@ -1,0 +1,19 @@
+{
+  "name": "obsidian-brain",
+  "description": "Manage Obsidian vault via CLI: process inbox, decompose notes, deduplicate, cluster, audit quality, and refactor tags",
+  "version": "1.0.0",
+  "author": {
+    "name": "YaroslavDrozdovskiy"
+  },
+  "homepage": "https://github.com/YaroslavDrozdovskiy/obsidian-brain",
+  "repository": "https://github.com/YaroslavDrozdovskiy/obsidian-brain",
+  "license": "MIT",
+  "keywords": [
+    "obsidian",
+    "notes",
+    "pkm",
+    "knowledge-management",
+    "vault",
+    "skills"
+  ]
+}

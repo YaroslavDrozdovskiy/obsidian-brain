@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "obsidian-brain",
+  "description": "Claude Code plugin for managing Obsidian vault via CLI",
+  "owner": {
+    "name": "YaroslavDrozdovskiy"
+  },
+  "plugins": [
+    {
+      "name": "obsidian-brain",
+      "description": "Manage Obsidian vault via CLI: process inbox, decompose notes, deduplicate, cluster, audit quality, and refactor tags",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "YaroslavDrozdovskiy"
+      }
+    }
+  ]
+}
