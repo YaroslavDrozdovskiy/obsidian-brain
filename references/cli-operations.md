@@ -4,6 +4,37 @@ Common CLI operations used by all skills. Read this reference at the start of an
 
 **Requirement:** Obsidian must be running for CLI commands to work.
 
+## Pre-flight Check: Installer Version
+
+If any CLI command output contains the warning:
+
+```
+Your Obsidian installer is out of date. Please download the latest installer which includes better CLI support
+```
+
+**STOP immediately.** Inform the user:
+1. Their Obsidian installer is outdated and CLI write commands may fail.
+2. They need to download the latest installer from [obsidian.md/download](https://obsidian.md/download) and reinstall (vault and settings are preserved).
+3. After reinstalling, restart Obsidian and retry.
+
+Do NOT proceed with the skill — write operations (`property:set`, `daily:append`, `append`, `prepend`, `create`, etc.) are likely to fail silently or with exit code 127.
+
+## Windows: Obsidian.exe vs Obsidian.com
+
+On Windows (Git Bash), `obsidian` may resolve to `Obsidian.exe` (GUI) instead of `Obsidian.com` (console). The GUI version breaks on **subcommands containing `:` when combined with parameters** (e.g. `property:set name=... value=...`), returning exit code 127.
+
+**Symptom:** read commands work, but `property:set`, `daily:append`, and other colon-subcommands with params fail with exit 127.
+
+**Fix:** the user must create a wrapper script at `~/bin/obsidian` (with `~/bin` in PATH):
+```bash
+#!/usr/bin/env bash
+exec '/c/Users/<username>/AppData/Local/Programs/Obsidian/Obsidian.com' "$@"
+```
+
+A wrapper works in both interactive and non-interactive shells (unlike aliases).
+
+If you detect exit 127 on a colon-subcommand, inform the user about this wrapper fix and stop.
+
 ## Vault Targeting
 
 All commands use the vault from `references/vault-config.md`. If the user has multiple vaults, prepend `vault="VaultName"` to commands.

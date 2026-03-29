@@ -5,6 +5,7 @@ A Claude Code plugin for managing your Obsidian vault via CLI. Provides a set of
 ## Requirements
 
 - Obsidian >= 1.12.4 with CLI enabled
+- **Obsidian installer must be up to date** — if you see a warning like `Your Obsidian installer is out of date`, download the latest installer from [obsidian.md/download](https://obsidian.md/download) and reinstall (vault and settings are preserved). An outdated installer can cause CLI write commands to fail silently.
 - Obsidian must be running when using skills
 - Claude Code
 
@@ -13,6 +14,23 @@ A Claude Code plugin for managing your Obsidian vault via CLI. Provides a set of
 1. Open Obsidian → Settings → General → Command line interface
 2. Toggle **Register CLI** on
 3. Verify: `obsidian version` in your terminal
+
+### Windows: CLI wrapper (important)
+
+On Windows, `obsidian` may resolve to `Obsidian.exe` (GUI version) instead of `Obsidian.com` (console version). The GUI exe breaks on subcommands with colon + parameters (`property:set`, `daily:append`, etc.) with exit code 127.
+
+**Fix:** create a wrapper script at `~/bin/obsidian` (ensure `~/bin` is in your PATH):
+
+```bash
+mkdir -p ~/bin
+cat > ~/bin/obsidian << 'EOF'
+#!/usr/bin/env bash
+exec '/c/Users/<username>/AppData/Local/Programs/Obsidian/Obsidian.com' "$@"
+EOF
+chmod +x ~/bin/obsidian
+```
+
+A wrapper script works in both interactive and non-interactive shells (unlike aliases).
 
 ## Installation
 
