@@ -8,3 +8,7 @@ Thumbs.db
 
 # Local config overrides
 references/vault-config.md
+
+# Development artifacts
+docs/plans/
+docs/specs/

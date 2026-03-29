@@ -1,3 +1,5 @@
+[Русская версия](README.ru.md)
+
 # obsidian-brain
 
 A Claude Code plugin for managing your Obsidian vault via CLI. Provides a set of skills for processing, organizing, and maintaining your knowledge base without leaving the terminal.
