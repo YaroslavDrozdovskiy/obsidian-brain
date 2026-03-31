@@ -12,6 +12,7 @@ Interactive refactoring of the vault's tag taxonomy.
 1. Read `references/vault-config.md` from this plugin directory for vault path and folder rules.
 2. Read `references/cli-operations.md` for CLI commands reference.
 3. Read `references/interaction-patterns.md` for interaction and safety rules.
+4. Read `references/trust-levels.md` for trust level definitions and constraints.
 
 ## Process
 
@@ -77,6 +78,26 @@ User can:
 - Edit individual renames
 - Remove items from the plan
 - Cancel
+
+### 4b. Ask Trust Level
+
+```
+
+Уровень подтверждения:
+
+- **cautious** — подтверждение каждого переименования
+- **balanced** — подтверждение всей таблицы переименований разом (рекомендуется)
+- **auto** — применить все переименования без подтверждений
+
+[balanced]
+
+```
+
+- `cautious`: confirm each rename individually
+- `balanced` (default): confirm the full rename table (step 4 approval serves as confirmation)
+- `auto`: apply all renames from the approved table without individual confirmation
+
+> In `balanced` and `auto` modes, step 4 user approval of the rename table IS the confirmation — proceed directly to execution.
 
 ### 5. Execute Renames
 
