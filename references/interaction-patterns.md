@@ -23,6 +23,41 @@ Used by skills that process items one by one (audit, dedup):
 3. Wait for user response: yes / no / custom alternative
 4. Apply the action, move to the next item
 
+## Trust Level Selection
+
+For skills that support trust levels (all skills in v2), ask the user at the start:
+
+```
+
+Выберите уровень подтверждения:
+
+- **cautious** — подтверждение каждого действия отдельно
+- **balanced** — подтверждение группами по категориям (рекомендуется)
+- **auto** — применить всё автоматически, показать отчёт
+
+[default_level]
+
+```
+
+See `references/trust-levels.md` for full details on behavior, constraints, and defaults per skill.
+
+## Subagent Error Handling
+
+For skills that dispatch subagents (audit, dedup, cluster, process-inbox):
+
+**Subagent failed:**
+- Do NOT block remaining subagents — use partial results
+- Inform user: "Задача [task] не завершилась ([error]). Продолжить без этих данных или повторить?"
+- On retry: re-dispatch only the failed subagent
+
+**Temp file missing after subagent completes:**
+- Treat as subagent failure
+- Same user prompt as above
+
+**Subagent returned empty result:**
+- Valid result — category may have zero issues
+- Report as: "Категория [X]: проблем не найдено ✓"
+
 ## Report Format
 
 After completing all operations, output a summary:
