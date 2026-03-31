@@ -40,7 +40,7 @@ chmod +x ~/bin/obsidian
 
 ```bash
 # Добавить маркетплейс с GitHub
-claude plugin marketplace add YaroslavDrozdovskiy/obsidian-brain
+claude plugin marketplace add straintensor15/obsidian-brain
 
 # Установить плагин
 claude plugin install obsidian-brain@obsidian-brain

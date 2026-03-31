@@ -3,7 +3,7 @@
   "name": "obsidian-brain",
   "description": "Claude Code plugin for managing Obsidian vault via CLI",
   "owner": {
-    "name": "YaroslavDrozdovskiy"
+    "name": "straintensor15"
   },
   "plugins": [
     {
@@ -12,7 +12,7 @@
       "version": "2.0.0-alpha.1",
       "source": "./",
       "author": {
-        "name": "YaroslavDrozdovskiy"
+        "name": "straintensor15"
       }
     }
   ]

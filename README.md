@@ -40,7 +40,7 @@ A wrapper script works in both interactive and non-interactive shells (unlike al
 
 ```bash
 # Add the marketplace from GitHub
-claude plugin marketplace add YaroslavDrozdovskiy/obsidian-brain
+claude plugin marketplace add straintensor15/obsidian-brain
 
 # Install the plugin
 claude plugin install obsidian-brain@obsidian-brain

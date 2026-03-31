@@ -3,10 +3,10 @@
   "description": "Manage Obsidian vault via CLI: process inbox, decompose notes, deduplicate, cluster, audit quality, and refactor tags",
   "version": "2.0.0-alpha.1",
   "author": {
-    "name": "YaroslavDrozdovskiy"
+    "name": "straintensor15"
   },
-  "homepage": "https://github.com/YaroslavDrozdovskiy/obsidian-brain",
-  "repository": "https://github.com/YaroslavDrozdovskiy/obsidian-brain",
+  "homepage": "https://github.com/straintensor15/obsidian-brain",
+  "repository": "https://github.com/straintensor15/obsidian-brain",
   "license": "MIT",
   "keywords": [
     "obsidian",

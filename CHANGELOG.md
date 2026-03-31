@@ -61,7 +61,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Skills: `/process-inbox`, `/decompose`, `/dedup`, `/cluster`, `/audit`, `/rename-tags`, `/improve`
 - Reference files: `vault-config`, `frontmatter-spec`, `cli-operations`, `interaction-patterns`
 
-[1.2.0]: https://github.com/YaroslavDrozdovskiy/obsidian-brain/compare/v1.1.1...v1.2.0
-[1.1.1]: https://github.com/YaroslavDrozdovskiy/obsidian-brain/compare/v1.1.0...v1.1.1
-[1.1.0]: https://github.com/YaroslavDrozdovskiy/obsidian-brain/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/YaroslavDrozdovskiy/obsidian-brain/releases/tag/v1.0.0
+[1.2.0]: https://github.com/straintensor15/obsidian-brain/compare/v1.1.1...v1.2.0
+[1.1.1]: https://github.com/straintensor15/obsidian-brain/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/straintensor15/obsidian-brain/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/straintensor15/obsidian-brain/releases/tag/v1.0.0
