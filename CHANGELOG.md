@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] — 2026-03-31
+## [2.0.0-alpha.1] — 2026-03-31
 
 ### Added
 - Parallel subagent scanning for audit, dedup, cluster, process-inbox skills
