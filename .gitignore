@@ -9,6 +9,9 @@ Thumbs.db
 # Local config overrides
 references/vault-config.md
 
+# Claude Code
+CLAUDE.md
+
 # Development artifacts
 docs/plans/
 docs/specs/
